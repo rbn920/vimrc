@@ -8,7 +8,7 @@ if has('win32')
 	set undodir=$HOME/vimfiles/undo,.
 	set rtp+=$HOME/vimfiles/bundle/Vundle.vim
 	call vundle#begin('$HOME/vimfiles/plugins/')
-	set guifont=Input:h12
+	set guifont=InputMonoNarrow:h10
 " If running on linux plarform
 else
 	set backupdir=$HOME/.vim/backup,.
@@ -16,7 +16,7 @@ else
 	set undodir=$HOME/.vim/undo,.
 	set rtp+=$HOME/.vim/bundle/Vundle.vim
 	call vundle#begin('$HOME/.vim/plugins/')
-	set guifont=Input\ Mono\ Narrow\ Light\ Semi-Condensed\ 12
+	set guifont=Input\ Mono\ Narrow\ Light\ Semi-Condensed\ 10
 endif
 
 " let Vundle manage Vundle, required
@@ -177,5 +177,6 @@ let mapleader = ","
 noremap <silent> ,cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
 noremap <silent> ,cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
 map <leader>ss :setlocal spell!<CR>
+map <F2> :NERDTreeToggle<CR>
 nnoremap <space> za
 "------------Key Mappings----------------
