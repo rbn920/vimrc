@@ -2,13 +2,13 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " If running on Windows platform.
-" Must place _vimrc in $HOME with the line 'source $HOME/vimfiles/.vimrc'
 if has('win32')
 	set backupdir=$HOME/vimfiles/backup,.
 	set directory=$HOME/vimfiles/temp//,.
 	set undodir=$HOME/vimfiles/undo,.
 	set rtp+=$HOME/vimfiles/bundle/Vundle.vim
 	call vundle#begin('$HOME/vimfiles/plugins/')
+	set guifont=Input:h12
 " If running on linux plarform
 else
 	set backupdir=$HOME/.vim/backup,.
@@ -16,6 +16,7 @@ else
 	set undodir=$HOME/.vim/undo,.
 	set rtp+=$HOME/.vim/bundle/Vundle.vim
 	call vundle#begin('$HOME/.vim/plugins/')
+	set guifont=Input\ Mono\ Narrow\ Light\ Semi-Condensed\ 12
 endif
 
 " let Vundle manage Vundle, required
@@ -99,7 +100,6 @@ endif
 "autocmd FileType python set omnifunc=pythoncomplete#Complete
 
 " misc
-set guifont=Input:h10
 set noswapfile
 set nu
 set clipboard=unnamed
