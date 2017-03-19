@@ -132,7 +132,7 @@ au BufRead,BufNewFile *.c,*.cc,*.h match BadWhitespace /^\t\+/
 au BufRead,BufNewFile *.c,*.cc,*.h match BadWhitespace /\s\+$/
 au         BufNewFile *.c,*.cc,*.h set fileformat=unix
 au BufRead,BufNewFile *.c,*.cc,*.h let b:comment_leader = '//'
-"------------Python files----------------
+"------------C/C++ files----------------
 
 "------------Webdev files----------------
 au BufRead,BufNewFile *.html,*.js,*.css set filetype=xml
